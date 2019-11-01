@@ -30,53 +30,56 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            this.flpButton = new System.Windows.Forms.FlowLayoutPanel();
-            this.bookerButton = new System.Windows.Forms.Button();
-            this.storekeeperButton = new System.Windows.Forms.Button();
+            this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.BookerButton = new System.Windows.Forms.Button();
+            this.StorekeeperButton = new System.Windows.Forms.Button();
             this.PurcрManagerButton = new System.Windows.Forms.Button();
             this.ClientManagerButton = new System.Windows.Forms.Button();
-            this.flpButton.SuspendLayout();
+            this.CourierButton = new System.Windows.Forms.Button();
+            this.FlowLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpButton
             // 
-            this.flpButton.Controls.Add(this.bookerButton);
-            this.flpButton.Controls.Add(this.storekeeperButton);
-            this.flpButton.Controls.Add(this.PurcрManagerButton);
-            this.flpButton.Controls.Add(this.ClientManagerButton);
-            this.flpButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpButton.Location = new System.Drawing.Point(0, 0);
-            this.flpButton.Name = "flpButton";
-            this.flpButton.Size = new System.Drawing.Size(374, 213);
-            this.flpButton.TabIndex = 0;
+            this.FlowLayout.Controls.Add(this.BookerButton);
+            this.FlowLayout.Controls.Add(this.StorekeeperButton);
+            this.FlowLayout.Controls.Add(this.PurcрManagerButton);
+            this.FlowLayout.Controls.Add(this.ClientManagerButton);
+            this.FlowLayout.Controls.Add(this.CourierButton);
+            this.FlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowLayout.Location = new System.Drawing.Point(0, 0);
+            this.FlowLayout.Name = "flpButton";
+            this.FlowLayout.Size = new System.Drawing.Size(186, 529);
+            this.FlowLayout.TabIndex = 0;
             // 
             // bookerButton
             // 
-            this.bookerButton.AutoSize = true;
-            this.bookerButton.Location = new System.Drawing.Point(3, 3);
-            this.bookerButton.Name = "Бухгалтер";
-            this.bookerButton.Size = new System.Drawing.Size(180, 100);
-            this.bookerButton.TabIndex = 0;
-            this.bookerButton.Text = "Бухгалтер";
-            this.bookerButton.UseVisualStyleBackColor = true;
-            this.bookerButton.Click += btn_bookerButton_Click;
+            this.BookerButton.AutoSize = true;
+            this.BookerButton.Location = new System.Drawing.Point(3, 3);
+            this.BookerButton.Name = "bookerButton";
+            this.BookerButton.Size = new System.Drawing.Size(180, 100);
+            this.BookerButton.TabIndex = 0;
+            this.BookerButton.Text = "Бухгалтер";
+            this.BookerButton.UseVisualStyleBackColor = true;
+            this.BookerButton.Click += btn_bookerButton_Click;
+
             // 
             // storekeeperButton
             // 
-            this.storekeeperButton.AutoSize = true;
-            this.storekeeperButton.Location = new System.Drawing.Point(189, 3);
-            this.storekeeperButton.Name = "Кладовщик";
-            this.storekeeperButton.Size = new System.Drawing.Size(180, 100);
-            this.storekeeperButton.TabIndex = 1;
-            this.storekeeperButton.Text = "Кладовщик";
-            this.storekeeperButton.UseVisualStyleBackColor = true;
-            this.storekeeperButton.Click += btn_storekeeperButton_Click;
+            this.StorekeeperButton.AutoSize = true;
+            this.StorekeeperButton.Location = new System.Drawing.Point(3, 109);
+            this.StorekeeperButton.Name = "storekeeperButton";
+            this.StorekeeperButton.Size = new System.Drawing.Size(180, 100);
+            this.StorekeeperButton.TabIndex = 1;
+            this.StorekeeperButton.Text = "Кладовщик";
+            this.StorekeeperButton.UseVisualStyleBackColor = true;
+            this.StorekeeperButton.Click += btn_storekeeperButton_Click;
             // 
             // PurcрManagerButton
             // 
             this.PurcрManagerButton.AutoSize = true;
-            this.PurcрManagerButton.Location = new System.Drawing.Point(3, 109);
-            this.PurcрManagerButton.Name = "Менеджер по закупкам";
+            this.PurcрManagerButton.Location = new System.Drawing.Point(3, 215);
+            this.PurcрManagerButton.Name = "PurcрManagerButton";
             this.PurcрManagerButton.Size = new System.Drawing.Size(180, 100);
             this.PurcрManagerButton.TabIndex = 2;
             this.PurcрManagerButton.Text = "Менеджер по закупкам";
@@ -86,26 +89,35 @@ namespace View
             // ClientManagerButton
             // 
             this.ClientManagerButton.AutoSize = true;
-            this.ClientManagerButton.Location = new System.Drawing.Point(189, 109);
-            this.ClientManagerButton.Name = "Менеджер по работе с клиентами";
+            this.ClientManagerButton.Location = new System.Drawing.Point(3, 321);
+            this.ClientManagerButton.Name = "ClientManagerButton";
             this.ClientManagerButton.Size = new System.Drawing.Size(180, 100);
             this.ClientManagerButton.TabIndex = 3;
             this.ClientManagerButton.Text = "Менеджер по клиентам";
             this.ClientManagerButton.UseVisualStyleBackColor = true;
             this.ClientManagerButton.Click += btn_ClientManagerButton_Click;
             // 
+            // CourierButton
+            // 
+            this.CourierButton.Location = new System.Drawing.Point(3, 427);
+            this.CourierButton.Name = "CourierButton";
+            this.CourierButton.Size = new System.Drawing.Size(180, 100);
+            this.CourierButton.TabIndex = 4;
+            this.CourierButton.Text = "Курьер";
+            this.CourierButton.UseVisualStyleBackColor = true;
+            this.CourierButton.Click += btn_CourierButton_Click;
+            // 
             // SignInView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 213);
-            this.Controls.Add(this.flpButton);
-            this.MaximumSize = new System.Drawing.Size(390, 252);
-            this.MinimumSize = new System.Drawing.Size(390, 252);
+            this.ClientSize = new System.Drawing.Size(186, 529);
+            this.Controls.Add(this.FlowLayout);
+            this.MinimumSize = new System.Drawing.Size(0, 252);
             this.Name = "SignInView";
             this.Text = "Окно авторизации";
-            this.flpButton.ResumeLayout(false);
-            this.flpButton.PerformLayout();
+            this.FlowLayout.ResumeLayout(false);
+            this.FlowLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -117,11 +129,12 @@ namespace View
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flpButton;
-        private Button bookerButton;
-        private Button storekeeperButton;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayout;
+        private Button BookerButton;
+        private Button StorekeeperButton;
         private Button PurcрManagerButton;
         private Button ClientManagerButton;
+        private Button CourierButton;
     }
 }
 
