@@ -26,6 +26,7 @@ namespace Presentation
 
         private void OpenClientManager()
         {
+            
             _kernel.Get<ClientManagerPresenter>().Run();
             _view.Close();
         }

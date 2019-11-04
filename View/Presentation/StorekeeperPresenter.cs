@@ -11,6 +11,15 @@ namespace Presentation
         {
             _kernel = kernel;
             _view = view;
+
+            _view.SearchPurchInvoice += () => SearchIncomingInvoice();
+        }
+
+        private void SearchIncomingInvoice()
+        {
+            _kernel.Get<StorekeeperSeacrhIncomingInvoicePresenter>().Run();
+            _view.Close();
+
         }
         public void Run()
         {

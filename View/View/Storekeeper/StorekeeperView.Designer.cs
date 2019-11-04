@@ -58,6 +58,7 @@
             this.SearchPurchInvoiceButton.TabIndex = 0;
             this.SearchPurchInvoiceButton.Text = "Поиск приходной накладной";
             this.SearchPurchInvoiceButton.UseVisualStyleBackColor = true;
+            this.SearchPurchInvoiceButton.Click += btn_SearchPurchInvoiceButton_Click;
             // 
             // SearchExprenseInvoiceButton
             // 

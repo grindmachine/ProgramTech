@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ninject;
 using Presentation;
+using View.Storekeeper;
 
 namespace View
 {
@@ -24,6 +25,7 @@ namespace View
             kernel.Bind<IBookerView>().To<BookerView>();
             kernel.Bind<ICourierView>().To<CourierView>();
             kernel.Bind<IStorekeeperView>().To<StorekeeperView>();
+            kernel.Bind<IStorekeeperSearchIncomingInvoiceView>().To<StorekeeperSearchIncomingInvoiceView>();
 
             kernel.Bind<CourierPresenter>().ToSelf();
             kernel.Bind<BookerPresenter>().ToSelf();
@@ -31,6 +33,7 @@ namespace View
             kernel.Bind<SignInPresenter>().ToSelf();
             kernel.Bind<ClientManagerPresenter>().ToSelf();
             kernel.Bind<StorekeeperPresenter>().ToSelf();
+            kernel.Bind<StorekeeperSeacrhIncomingInvoicePresenter>().ToSelf();
 
 
             Application.EnableVisualStyles();

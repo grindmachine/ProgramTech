@@ -13,6 +13,7 @@ namespace Presentation
             _view = view;
         }
 
+
         public void Run()
         {
             _view.Show();
