@@ -1,6 +1,6 @@
 ﻿namespace View.Storekeeper
 {
-    partial class StorekeeperSearchIncomingInvoiceView
+    partial class StorekeeperSearchSalesInvoiceView
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.GeneralPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LabelExplaneMessage = new System.Windows.Forms.Label();
             this.TextBoxNumberInvoice = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.PanelNotFoundInvoice = new System.Windows.Forms.Panel();
             this.LabelNotFoundInvoice = new System.Windows.Forms.Label();
             this.PanelFoundInvoice = new System.Windows.Forms.Panel();
-            this.BtnConfirmAdmission = new System.Windows.Forms.Button();
+            this.BtnIssuanceAdmission = new System.Windows.Forms.Button();
             this.BtnShowInvoiceContent = new System.Windows.Forms.Button();
             this.LabelFoundInvoice = new System.Windows.Forms.Label();
             this.PanelInvoiceInfo = new System.Windows.Forms.FlowLayoutPanel();
@@ -73,7 +73,7 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.label1);
+            this.flowLayoutPanel2.Controls.Add(this.LabelExplaneMessage);
             this.flowLayoutPanel2.Controls.Add(this.TextBoxNumberInvoice);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -81,16 +81,16 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(426, 36);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
-            // label1
+            // LabelExplaneMessage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(1, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 7, 1, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Введите номер приходной накладной:";
+            this.LabelExplaneMessage.AutoSize = true;
+            this.LabelExplaneMessage.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelExplaneMessage.Location = new System.Drawing.Point(1, 7);
+            this.LabelExplaneMessage.Margin = new System.Windows.Forms.Padding(1, 7, 1, 1);
+            this.LabelExplaneMessage.Name = "LabelExplaneMessage";
+            this.LabelExplaneMessage.Size = new System.Drawing.Size(241, 17);
+            this.LabelExplaneMessage.TabIndex = 0;
+            this.LabelExplaneMessage.Text = "Введите номер расходной накладной:";
             // 
             // TextBoxNumberInvoice
             // 
@@ -144,7 +144,7 @@
             // 
             // PanelFoundInvoice
             // 
-            this.PanelFoundInvoice.Controls.Add(this.BtnConfirmAdmission);
+            this.PanelFoundInvoice.Controls.Add(this.BtnIssuanceAdmission);
             this.PanelFoundInvoice.Controls.Add(this.BtnShowInvoiceContent);
             this.PanelFoundInvoice.Controls.Add(this.LabelFoundInvoice);
             this.PanelFoundInvoice.Controls.Add(this.PanelInvoiceInfo);
@@ -153,15 +153,16 @@
             this.PanelFoundInvoice.Size = new System.Drawing.Size(867, 225);
             this.PanelFoundInvoice.TabIndex = 6;
             // 
-            // BtnConfirmAdmission
+            // BtnIssuanceAdmission
             // 
-            this.BtnConfirmAdmission.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnConfirmAdmission.Location = new System.Drawing.Point(547, 107);
-            this.BtnConfirmAdmission.Name = "BtnConfirmAdmission";
-            this.BtnConfirmAdmission.Size = new System.Drawing.Size(262, 56);
-            this.BtnConfirmAdmission.TabIndex = 2;
-            this.BtnConfirmAdmission.Text = "Подтвердить приём заказа";
-            this.BtnConfirmAdmission.UseVisualStyleBackColor = true;
+            this.BtnIssuanceAdmission.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnIssuanceAdmission.Location = new System.Drawing.Point(547, 107);
+            this.BtnIssuanceAdmission.Name = "BtnIssuanceAdmission";
+            this.BtnIssuanceAdmission.Size = new System.Drawing.Size(262, 56);
+            this.BtnIssuanceAdmission.TabIndex = 2;
+            this.BtnIssuanceAdmission.Text = "Подтвердить выдачу заказа";
+            this.BtnIssuanceAdmission.UseVisualStyleBackColor = true;
+            this.BtnIssuanceAdmission.Click += btn_IssuanceAdmission_Click;
             // 
             // BtnShowInvoiceContent
             // 
@@ -172,6 +173,7 @@
             this.BtnShowInvoiceContent.TabIndex = 1;
             this.BtnShowInvoiceContent.Text = "Просмотреть содержимое заказа";
             this.BtnShowInvoiceContent.UseVisualStyleBackColor = true;
+            this.BtnShowInvoiceContent.Click += btn_ShowInvcCont_Click;
             // 
             // LabelFoundInvoice
             // 
@@ -232,7 +234,7 @@
             this.LabelNameOrganization.Name = "LabelNameOrganization";
             this.LabelNameOrganization.Size = new System.Drawing.Size(175, 17);
             this.LabelNameOrganization.TabIndex = 0;
-            this.LabelNameOrganization.Text = "Название организации: ";
+            this.LabelNameOrganization.Text = "ФИО заказчика: ";
             // 
             // LabelNameOrganizSet
             // 
@@ -300,8 +302,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MaximumSize = new System.Drawing.Size(918, 553);
             this.MinimumSize = new System.Drawing.Size(918, 553);
-            this.Name = "StorekeeperSearchIncomingInvoiceView";
-            this.Text = "Поиск приходной накладной";
+            this.Name = "StorekeeperSearchSalesInvoiceView";
+            this.Text = "Поиск расходной накладной";
             this.GeneralPanel.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
@@ -320,7 +322,7 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel GeneralPanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelExplaneMessage;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.MaskedTextBox TextBoxNumberInvoice;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
@@ -328,7 +330,7 @@
         private System.Windows.Forms.Panel PanelNotFoundInvoice;
         private System.Windows.Forms.Label LabelNotFoundInvoice;
         private System.Windows.Forms.Panel PanelFoundInvoice;
-        private System.Windows.Forms.Button BtnConfirmAdmission;
+        private System.Windows.Forms.Button BtnIssuanceAdmission;
         private System.Windows.Forms.Button BtnShowInvoiceContent;
         private System.Windows.Forms.Label LabelFoundInvoice;
         private System.Windows.Forms.FlowLayoutPanel PanelInvoiceInfo;

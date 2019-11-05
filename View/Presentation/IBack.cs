@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-    interface IStorekeeperSearchIncomingInvoiceView : IStorekeeperSearchInvoiceView
+    public interface IBack
     {
+        event Action Back;
     }
 }

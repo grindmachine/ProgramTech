@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -55,22 +57,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\BriefInvoiceInfo.cs" />
+    <Compile Include="Model\IBriefInvoiceInfo.cs" />
+    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\Model.cs" />
     <Compile Include="Presentation\BookerPresenter.cs" />
     <Compile Include="Presentation\CourierPresenter.cs" />
+    <Compile Include="Presentation\IBack.cs" />
     <Compile Include="Presentation\IBookerView.cs" />
     <Compile Include="Presentation\IClientManagerView.cs" />
     <Compile Include="Presentation\ICourierView.cs" />
     <Compile Include="Presentation\IPresenter.cs" />
     <Compile Include="Presentation\IPurcpManagerView.cs" />
+    <Compile Include="Presentation\ISetInfoInvoiceForSearchInvoice.cs" />
     <Compile Include="Presentation\ISignInView.cs" />
     <Compile Include="Presentation\IStorekeeperSearchIncomingInvoiceView.cs" />
+    <Compile Include="Presentation\IStorekeeperSearchInvoiceView.cs" />
     <Compile Include="Presentation\IStorekeeperView.cs" />
+    <Compile Include="Presentation\IStorekeeperSearchSalesInvoiceView.cs" />
     <Compile Include="Presentation\IView.cs" />
     <Compile Include="Presentation\ClientManagerPresenter.cs" />
     <Compile Include="Presentation\PurcpManagerPresenter.cs" />
     <Compile Include="Presentation\SignInPresenter.cs" />
     <Compile Include="Presentation\StorekeeperPresenter.cs" />
     <Compile Include="Presentation\StorekeeperSeacrhIncomingInvoicePresenter.cs" />
+    <Compile Include="Presentation\StorekeeperSearchSalesInvoicePresenter.cs" />
     <Compile Include="View\BookerView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +125,12 @@
     </Compile>
     <Compile Include="View\Storekeeper\StorekeeperView.Designer.cs">
       <DependentUpon>StorekeeperView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Storekeeper\StorekeeperSearchSalesInvoiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Storekeeper\StorekeeperSearchSalesInvoiceView.Designer.cs">
+      <DependentUpon>StorekeeperSearchSalesInvoiceView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,8 +179,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

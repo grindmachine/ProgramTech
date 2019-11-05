@@ -1,20 +1,21 @@
 ﻿using System;
-using Ninject;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using Ninject;
 using Model;
 
 namespace Presentation
 {
-    class StorekeeperSeacrhIncomingInvoicePresenter : IPresenter
+    class StorekeeperSearchSalesInvoicePresenter : IPresenter
     {
         private readonly IKernel _kernel;
         private readonly IStorekeeperSearchInvoiceView _view;
         private readonly IModel _model;
 
-        public StorekeeperSeacrhIncomingInvoicePresenter(IKernel kernel, IStorekeeperSearchIncomingInvoiceView view, IModel model)
+        public StorekeeperSearchSalesInvoicePresenter(IKernel kernel, IStorekeeperSearchSalesInvoiceView view, IModel model)
         {
             _kernel = kernel;
             _view = view;
@@ -37,7 +38,7 @@ namespace Presentation
             {
                 return false;
             }
-            IBriefInvoiceInfo info = _model.findIncomingInvoice(number);
+            IBriefInvoiceInfo info = _model.findSalesInvoice(number);
             if (info != null)
             {
                 _view.setName(info.getName());

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-    interface IStorekeeperSearchIncomingInvoiceView : IStorekeeperSearchInvoiceView
+    interface IStorekeeperSearchSalesInvoiceView : IStorekeeperSearchInvoiceView
     {
     }
 }

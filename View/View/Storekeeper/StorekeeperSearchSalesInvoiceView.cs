@@ -8,24 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presentation;
-using Ninject;
 
 namespace View.Storekeeper
 {
-    public partial class StorekeeperSearchIncomingInvoiceView : Form, IStorekeeperSearchIncomingInvoiceView
+    public partial class StorekeeperSearchSalesInvoiceView : Form, IBack, IStorekeeperSearchSalesInvoiceView
     {
-        ApplicationContext _context;
-        public StorekeeperSearchIncomingInvoiceView(ApplicationContext context)
+        private readonly ApplicationContext _context;
+        public StorekeeperSearchSalesInvoiceView(ApplicationContext context)
         {
             _context = context;
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
+        public event Action Back;
+        public event Search search;
         public event Action ShowInvoiceContent;
         public event Action ConfirmAdmission;
-        public event Search search;
-        public event Action Back;
 
         private void btn_Search_Click(object o, EventArgs e)
         {
@@ -45,7 +43,7 @@ namespace View.Storekeeper
             ShowInvoiceContent?.Invoke();
         }
 
-        private void btn_ConfirmAdmission_Click(object o, EventArgs e)
+        private void btn_IssuanceAdmission_Click(object o, EventArgs e)
         {
             ConfirmAdmission?.Invoke();
         }
@@ -60,9 +58,9 @@ namespace View.Storekeeper
             return TextBoxNumberInvoice.Text;
         }
 
-        public void setNumberInvoice(string number)
+        public void setCost(string cost)
         {
-            this.LabelNumberSet.Text = number;
+            this.LabelCostSet.Text = cost;
         }
 
         public void setName(string name)
@@ -70,9 +68,9 @@ namespace View.Storekeeper
             this.LabelNameOrganizSet.Text = name;
         }
 
-        public void setCost(string cost)
+        public void setNumberInvoice(string number)
         {
-            this.LabelCostSet.Text = cost;
+            this.LabelNumberSet.Text = number;
         }
 
         public new void Show()
