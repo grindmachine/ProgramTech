@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Ninject;
 using Presentation;
 using View.Storekeeper;
+using View.ClientManager;
 using Model;
 
 namespace View
@@ -28,6 +29,7 @@ namespace View
             kernel.Bind<IStorekeeperView>().To<StorekeeperView>();
             kernel.Bind<IStorekeeperSearchIncomingInvoiceView>().To<StorekeeperSearchIncomingInvoiceView>();
             kernel.Bind<IStorekeeperSearchSalesInvoiceView>().To<StorekeeperSearchSalesInvoiceView>();
+            kernel.Bind<IClientManagerAddOrderView>().To<ClientManagerAddOrderView>();
             kernel.Bind<IModel>().To<Model.Model>();
 
             kernel.Bind<CourierPresenter>().ToSelf();
@@ -38,6 +40,7 @@ namespace View
             kernel.Bind<StorekeeperPresenter>().ToSelf();
             kernel.Bind<StorekeeperSeacrhIncomingInvoicePresenter>().ToSelf();
             kernel.Bind<StorekeeperSearchSalesInvoicePresenter>().ToSelf();
+            kernel.Bind<ClientManagerAddOrderPresenter>().ToSelf();
 
 
             Application.EnableVisualStyles();

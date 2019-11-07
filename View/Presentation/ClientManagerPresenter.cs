@@ -23,7 +23,8 @@ namespace Presentation
 
         private void CreateNewOrder()
         {
-
+            _kernel.Get<ClientManagerAddOrderPresenter>().Run();
+            _view.Close();
         }
 
         private void ShowOrders()

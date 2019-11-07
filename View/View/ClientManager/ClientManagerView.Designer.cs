@@ -55,6 +55,7 @@
             this.AddOrderButton.TabIndex = 0;
             this.AddOrderButton.Text = "Добавить заказ";
             this.AddOrderButton.UseVisualStyleBackColor = true;
+            this.AddOrderButton.Click += btn_AddOrder_click;
             // 
             // LookOrderButton
             // 
