@@ -23,13 +23,15 @@ namespace Presentation
 
         private void CreateNewOrder()
         {
-            _kernel.Get<ClientManagerAddOrderPresenter>().Run();
+            //_kernel.Get<ClientManagerAddOrderPresenter>().Run();
+            new ClientManagerAddOrderPresenter(_kernel, _kernel.Get<IClientManagerAddOrderView>()).Run();
             _view.Close();
         }
 
         private void ShowOrders()
         {
-
+            _kernel.Get<ClientManagerInspectOrderPresenter>().Run();
+            _view.Close();
         }
 
         public void Run()

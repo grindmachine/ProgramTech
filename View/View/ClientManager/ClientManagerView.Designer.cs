@@ -67,6 +67,7 @@
             this.LookOrderButton.TabIndex = 1;
             this.LookOrderButton.Text = "Просмотреть заказы";
             this.LookOrderButton.UseVisualStyleBackColor = true;
+            this.LookOrderButton.Click += btn_LookOrder_click;
             // 
             // ClientManagerView
             // 

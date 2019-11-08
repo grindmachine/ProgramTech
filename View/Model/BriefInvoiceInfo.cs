@@ -12,7 +12,7 @@ namespace Model
         private string Number;
         private string Cost;
 
-        public BriefInvoiceInfo() { }
+        public BriefInvoiceInfo() : this(null, null, null) { }
         public BriefInvoiceInfo(string name, string number, string cost)
         {
             setName(name);

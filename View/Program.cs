@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using Ninject;
 using Presentation;
 using View.Storekeeper;
-using View.ClientManager;
 using Model;
 
 namespace View
@@ -30,7 +29,11 @@ namespace View
             kernel.Bind<IStorekeeperSearchIncomingInvoiceView>().To<StorekeeperSearchIncomingInvoiceView>();
             kernel.Bind<IStorekeeperSearchSalesInvoiceView>().To<StorekeeperSearchSalesInvoiceView>();
             kernel.Bind<IClientManagerAddOrderView>().To<ClientManagerAddOrderView>();
+            kernel.Bind<IClientManagerAddOrderSecondStepView>().To<ClientManagerAddOrderSecondStepView>();
             kernel.Bind<IModel>().To<Model.Model>();
+            kernel.Bind<IClientOrder>().To<ClientOrder>();
+            kernel.Bind<IClientManagerInspectOrderView>().To<ClientManagerInspectOrderView>();
+           
 
             kernel.Bind<CourierPresenter>().ToSelf();
             kernel.Bind<BookerPresenter>().ToSelf();
@@ -41,13 +44,14 @@ namespace View
             kernel.Bind<StorekeeperSeacrhIncomingInvoicePresenter>().ToSelf();
             kernel.Bind<StorekeeperSearchSalesInvoicePresenter>().ToSelf();
             kernel.Bind<ClientManagerAddOrderPresenter>().ToSelf();
+            kernel.Bind<ClientManagerInspectOrderPresenter>().ToSelf();
 
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             kernel.Get<SignInPresenter>().Run();
-            Application.Run(kernel.Get<ApplicationContext>());
+            Application.Run(kernel.Get<ApplicationContext>());  
         }
     }
 }
