@@ -9,19 +9,19 @@ namespace Model
 {
     public interface IClientOrder
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Patronymic { get; set; }
-        public int OrderNumber { get; set; }
-        public string EmailAddress { get; set; }
-        public string PhoneNumber { get; set; }
-        public string City { get; set; }
-        public string Street { get; set; }
-        public string Pavilion { get; set; }
-        public string HouseNumber { get; set; }
-        public string Flat { get; set; }
-        public DateTime GetDate();
-        public void SetDate(DateTime _date);
+        string Name { get; set; }
+        string Surname { get; set; }
+        string Patronymic { get; set; }
+        int OrderNumber { get; set; }
+        string EmailAddress { get; set; }
+        string PhoneNumber { get; set; }
+        string City { get; set; }
+        string Street { get; set; }
+        string Pavilion { get; set; }
+        string HouseNumber { get; set; }
+        string Flat { get; set; }
+        DateTime GetDate();
+        void SetDate(DateTime _date);
         //public void getStatus(); public void SetStatus();
         //public void getPurchaseList public void setPurchaseList();
         //public void addPurchase(Purchase p); public void deletePurchase(Purchase p)

@@ -6,25 +6,25 @@ namespace Presentation
     {
         event Action NextStep;
 
-        public string getName();
-        public void setName(string name);
-        public string getSurname();
-        public void setSurname(string surname);
-        public string getPatronymic();
-        public void setPatronymic(string patronymic);
-        public string getCity();
-        public void setCity(string city);
-        public string getStreet();
-        public void setStreet(string street);
-        public string getPavilion();
-        public void setPavilion(string pavilion);
-        public string getHouseNumber();
-        public void setHouseNumber(string houseNumber);
-        public string getFlat();
-        public void setFlat(string flat);
-        public string getPhoneNumber();
-        public void setPhoneNumber(string phoneNumber);
-        public string getEmailAddress();
-        public void setEmailAddress(string emailAddress);
+        string getName();
+        void setName(string name);
+        string getSurname();
+        void setSurname(string surname);
+        string getPatronymic();
+        void setPatronymic(string patronymic);
+        string getCity();
+        void setCity(string city);
+        string getStreet();
+        void setStreet(string street);
+        string getPavilion();
+        void setPavilion(string pavilion);
+        string getHouseNumber();
+        void setHouseNumber(string houseNumber);
+        string getFlat();
+        void setFlat(string flat);
+        string getPhoneNumber();
+        void setPhoneNumber(string phoneNumber);
+        string getEmailAddress();
+        void setEmailAddress(string emailAddress);
     }
 }
